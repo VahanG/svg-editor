@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Picsart Extension App Sample"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Picsart Extension</title>
+    <script type="text/javascript">
+      const query = window.location.search;
+      const params = new URLSearchParams(query);
+      const currentTheme = params.get('theme');
+      if (currentTheme) {
+        const html = document.querySelector('html');
+        ['dark', 'light'].forEach(classname => {
+          html.classList.remove(classname);
+        });
+        html.classList.add(currentTheme);
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="picsart-extension"></div>
+    <div id="root"></div>
+  </body>
+</html>

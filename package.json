@@ -1,0 +1,54 @@
+{
+  "name": "svg-editor",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "danger": "danger ci",
+    "start": "react-scripts start",
+    "start1": "PORT=3001 react-scripts start",
+    "eject": "react-scripts eject",
+    "commit": "git cz --hook",
+    "check:ts": "tsc --noEmit",
+    "check:lint": "eslint 'src/**/*.{js,ts,tsx,jsx}' --quiet",
+    "build": "env-cmd -f .env react-scripts build && cd build && zip -r build.zip *",
+    "build:prod": "env-cmd -f .env.production react-scripts build && cd build && zip -r build.zip *",
+    "check:lint-fix": "eslint 'src/**/*.{js,ts,tsx,jsx}' --quiet --fix",
+    "check:lint-ci": "eslint 'src/**/*.{js,ts,tsx,jsx}' -f json -o eslint-report.json"
+  },
+  "dependencies": {
+    "paper": "^0.12.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-jss": "^10.9.2",
+    "sass": "^1.70.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@commitlint/cz-commitlint": "^16.3.0",
+    "@types/node": "^16.18.11",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "commitizen": "^4.2.6",
+    "compare-versions": "^4.1.4",
+    "danger": "^11.2.1",
+    "env-cmd": "^10.1.0",
+    "lint-staged": "^12.5.0",
+    "micromatch": "^4.0.5",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.9.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

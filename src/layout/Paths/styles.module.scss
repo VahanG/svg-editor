@@ -1,0 +1,22 @@
+.paths {
+  border-left: 1px solid black;
+  width: 194px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.path {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #402e3414;
+  cursor: pointer;
+  &.selected {
+    border: 1px solid red;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

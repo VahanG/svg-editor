@@ -1,0 +1,6 @@
+/node_modules
+/public
+
+commitlint.config.js
+danger.js
+pi.config.js
